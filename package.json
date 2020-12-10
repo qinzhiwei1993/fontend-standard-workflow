@@ -1,22 +1,41 @@
 {
-  "name": "@qinzhiwei1993/fontend-standard-workflow",
-  "version": "1.0.0",
-  "description": "代码规范校验，commit msg校验，CHANGELOG.md生成，版本升级，打tag，发布release",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/qinzhiwei1993/fontend-standard-workflow.git"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "author": "qinzhiwei",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/qinzhiwei1993/fontend-standard-workflow/issues"
-  },
-  "homepage": "https://github.com/qinzhiwei1993/fontend-standard-workflow#readme"
+    "name": "@qinzhiwei1993/fontend-standard-workflow",
+    "version": "1.0.0",
+    "description": "代码规范校验，commit msg校验，CHANGELOG.md生成，版本升级，打tag，发布release",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "src/*_/_.{js,vue}": [
+            "npm run lint",
+            "git add"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/qinzhiwei1993/fontend-standard-workflow.git"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "author": "qinzhiwei",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/qinzhiwei1993/fontend-standard-workflow/issues"
+    },
+    "homepage": "https://github.com/qinzhiwei1993/fontend-standard-workflow#readme",
+    "devDependencies": {
+        "eslint": "^7.15.0",
+        "eslint-config-standard": "^16.0.2",
+        "eslint-plugin-import": "^2.22.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^4.2.1",
+        "husky": "^4.3.5"
+    }
 }
