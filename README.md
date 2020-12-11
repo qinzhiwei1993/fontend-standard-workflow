@@ -52,7 +52,7 @@ huksy 支持所有`Git Hooks`:
 
 其中，Header 是必需的，Body 和 Footer 可以省略。
 
-#### 3.1.1 Header
+#### 3.1 Header
 
 Header 部分只有一行，包括三个字段：`type`（必需）、`scope`（可选）和`subject`（必需）
 
@@ -73,11 +73,11 @@ chore：构建过程或辅助工具的变动
 
 > （3）`subject`是 commit 目的的简短描述，不超过 50 个字符
 
-#### 3.1.2 Body
+#### 3.2 Body
 
 Body 部分是对本次 commit 的详细描述，可以分成多行
 
-#### 3.1.3 Footer
+#### 3.3 Footer
 
 > （1）不兼容变动
 
@@ -127,3 +127,31 @@ npx commitizen init cz-conventional-changelog --save-dev --save-exact
     }
 }
 ```
+
+## 5.[commitlint](https://github.com/conventional-changelog/commitlint#what-is-commitlint)
+
+在介绍完`conventional commit`和交互式的`commit`工具之后，现在还需要一个能校验我们所提交的代码是否严格遵循了`conventional commit`规范的工具。这个工具就是`commitlint`
+
+这个工具使用很简单，仅需一下两步即可：
+
+```shell
+# Install commitlint cli and conventional config
+npm install --save-dev @commitlint/{config-conventional,cli}
+
+# Configure commitlint to use conventional config
+echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
+```
+
+[commitlint-config-conventional (based on the the Angular convention)](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional#type-enum) 支持一下类型: 
+
+1. build
+2. ci
+3. chore
+4. docs
+5. feat
+6. fix
+7. perf
+8. refactor
+9. revert
+10. style
+11. test
