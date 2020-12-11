@@ -155,3 +155,23 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitl
 9. `revert`: 返回先前的提交
 10. `style`: 不影响代码含义的更改(空白、格式、缺少分号等)
 11. `test`: 测试
+
+
+## 6.[conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)
+
+`commit-msg`的交互式提交和格式校验工具都已经实现，下面就需要根据我们的**约定提交**内容生成变更文档了`CHANGELOG.md`
+
+`conventional-changelog`提取`git log`历史信息，然后生成文档
+
+快速开始
+
+```bash
+$ npm install -g conventional-changelog-cli
+$ cd my-project
+
+# 在之前CHANGELOG.md基础上叠加，更新最近一个tag的commit msg
+$ conventional-changelog -p angular -i CHANGELOG.md -s
+
+# 更新全部commit msg，覆盖CHANGELOG.md
+conventional-changelog -p angular -i CHANGELOG.md -s -r 0
+```
