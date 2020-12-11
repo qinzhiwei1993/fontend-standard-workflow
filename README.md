@@ -185,3 +185,40 @@ conventional-changelog -p angular -i CHANGELOG.md -s -r 0
     }
 }
 ```
+
+
+## 7. 自动发版工具[standard-version](https://github.com/conventional-changelog/standard-version)
+
+**语义化版本控制**版本格式：`MAJOR.MINOR.PATCH`，版本号递增规则如下：
+
+主版本号：当你做了不兼容的 API 修改，
+次版本号：当你做了向下兼容的功能性新增，
+修订号：当你做了向下兼容的问题修正
+
+`standard-version`是基于[semver](https://semver.org/)(Semantic Versioning)和[Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)进行版本变更和生成 changeLog 的实用工具
+
+`standard-version`作了以下几件事:
+
+1. 查看`package.json`中版本
+2. 升级`package.json`中版本号和`package-lock.json`中版本号
+3. 基于[conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) 生成`changelog`
+4. 创建一个新的 commit（包含`bumpFiles`和更新的`CHANGELOG`）
+5. 基于新的版本创建`tag`
+
+### 快速开始
+
+1. 安装依赖
+
+`npm install --save-dev standard-version`
+
+2. 在`package.json`中添加脚本
+
+```json
+{
+    "scripts": {
+        "release": "standard-version"
+    }
+}
+
+// npm run release
+```
