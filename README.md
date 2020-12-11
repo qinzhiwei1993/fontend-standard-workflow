@@ -175,3 +175,13 @@ $ conventional-changelog -p angular -i CHANGELOG.md -s
 # 更新全部commit msg，覆盖CHANGELOG.md
 conventional-changelog -p angular -i CHANGELOG.md -s -r 0
 ```
+
+在`package.json`中配置
+
+```json
+{
+    "scripts": {
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+    }
+}
+```
