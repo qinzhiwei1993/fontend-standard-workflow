@@ -9,6 +9,7 @@
     },
     "husky": {
         "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
             "pre-commit": "lint-staged"
         }
     },
@@ -31,7 +32,9 @@
     },
     "homepage": "https://github.com/qinzhiwei1993/fontend-standard-workflow#readme",
     "devDependencies": {
+        "@commitlint/config-conventional": "^11.0.0",
         "commitizen": "^4.2.2",
+        "commitlint": "^11.0.0",
         "cz-conventional-changelog": "^3.3.0",
         "eslint": "^7.15.0",
         "eslint-config-standard": "^16.0.2",
