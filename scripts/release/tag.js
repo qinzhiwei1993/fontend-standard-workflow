@@ -26,7 +26,8 @@ log(chalk.keyword('orange')(`请确保本地所有变更已经'commit'`))
 
 exec(CMD, (err, stdout, stderr) => {
     if (err) {
-        return log(chalk.red(stderr))
+        log(chalk.red(stderr))
+        process.exit(1) // 如果当前版本已经存在，退出程序后续不在执行
     }
     log(chalk.green(`taged ${version} success!`))
     log(chalk.green(`please run 'git push --follow-tags' if you are ready`)) // --follow-tags参数会使得 commit 以及与之相关的标签（注意，不是所有的标签）一起推送

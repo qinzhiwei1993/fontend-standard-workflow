@@ -225,6 +225,7 @@ conventional-changelog -p angular -i CHANGELOG.md -s -r 0
 
 发布到`Github release`或者`GitLab release`
 
+**不建议将`Personal access tokens`放到项目本地使用，发布到`github`识别后会立即失效**
 ### 快速开始
 
 ```bin
