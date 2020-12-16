@@ -1,9 +1,24 @@
+# [1.3.0](https://github.com/qinzhiwei1993/fontend-standard-workflow/compare/v1.1.1...v1.3.0) (2020-12-16)
+
+
+### 🎫 Chores | 其他更新
+
+* tag脚本优化,检测到tag存在,退出进程 ([c78cb5a](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/c78cb5a778186bb3a55cfecb4b0e5e1aaf610364))
+* 升级版本 ([6b598f2](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/6b598f27373346d567e11490d58c1505454ad663))
+
+
+
 ## [1.1.1](https://github.com/qinzhiwei1993/fontend-standard-workflow/compare/v1.1.0...v1.1.1) (2020-12-16)
 
 
 ### ✅ Tests | 测试
 
 * 测试发版 ([7381bb5](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/7381bb5bb5dbefef4dc9aecde4986404bf141450))
+
+
+### 🎫 Chores | 其他更新
+
+* 升级版本 &  CHANGELOG.md ([f9f6469](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/f9f646919d04b41b41f0d377dde3880ab3e3b038))
 
 
 
