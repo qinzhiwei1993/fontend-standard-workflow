@@ -1,6 +1,6 @@
 {
   "name": "@qinzhiwei1993/fontend-standard-workflow",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "代码规范校验，commit msg校验，CHANGELOG.md生成，版本升级，打tag，发布release",
   "main": "index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "changelog": "conventional-changelog -p angular -n changelog-options.js -i CHANGELOG.md -s -r 0",
     "github-releaser": "conventional-github-releaser -p angular -n changelog-options.js -i CHANGELOG.md -s -r 0 -t 8ade029a7afe6972a2d19b631ac5b9596fd8cedd",
     "update-project-version:project-minor": "node scripts/release/version-updater.js -t project -r minor",
-    "update-project-version:project-patch": "node scripts/release/version-updater.js -t project -r minor",
+    "update-project-version:project-patch": "node scripts/release/version-updater.js -t project -r patch",
     "update-package-version:patch": "node scripts/release/version-updater.js -r patch",
     "update-package-version:minor": "node scripts/release/version-updater.js -r minor",
     "tag": "node scripts/release/tag.js",
@@ -52,7 +52,8 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "husky": "^4.3.5"
+    "husky": "^4.3.5",
+    "yargs": "^16.2.0"
   },
   "config": {
     "commitizen": {

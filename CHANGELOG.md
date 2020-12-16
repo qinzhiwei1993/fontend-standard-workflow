@@ -1,14 +1,29 @@
+## [1.1.1](https://github.com/qinzhiwei1993/fontend-standard-workflow/compare/v1.1.0...v1.1.1) (2020-12-16)
+
+
+### ✅ Tests | 测试
+
+* 测试发版 ([7381bb5](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/7381bb5bb5dbefef4dc9aecde4986404bf141450))
+
+
+
 # [1.1.0](https://github.com/qinzhiwei1993/fontend-standard-workflow/compare/v1.2.0...v1.1.0) (2020-12-16)
 
 
 ### 🎫 Chores | 其他更新
 
+* scripts ([e379728](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/e379728c0274254a416068ba7f3a744a445e315b))
 * 仿真发版or预发布发版 ([cb01def](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/cb01def1b2532f8b7fb01cc275e91be1cbba252c))
 
 
 ### 👷‍ Build System | 构建
 
 * scripts脚本 ([e019ffd](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/e019ffdf16b68c89337babea4d00ff574a831342))
+
+
+### 📝 Documentation | 文档
+
+* CHANGELOG.md ([e0e1ddc](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/e0e1ddcb40640a95fa14cf07720ab35cc1fa94c5))
 
 
 
