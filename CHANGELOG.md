@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/qinzhiwei1993/fontend-standard-workflow/compare/v1.3.0...v1.4.0) (2020-12-16)
+
+
+### 👷‍ Build System | 构建
+
+* github-releaser去掉-r ([320318b](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/320318b6d7959b8cc0e75e9e675513786709e8be))
+
+
+
 # [1.3.0](https://github.com/qinzhiwei1993/fontend-standard-workflow/compare/v1.1.1...v1.3.0) (2020-12-16)
 
 
@@ -5,6 +14,11 @@
 
 * tag脚本优化,检测到tag存在,退出进程 ([c78cb5a](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/c78cb5a778186bb3a55cfecb4b0e5e1aaf610364))
 * 升级版本 ([6b598f2](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/6b598f27373346d567e11490d58c1505454ad663))
+
+
+### 📝 Documentation | 文档
+
+* CHANGELOG.md ([f221f6d](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/f221f6d69bfb360b8e296321c12e4047cd2cc6b8))
 
 
 
