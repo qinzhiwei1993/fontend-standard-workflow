@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "commit": "cz",
     "changelog": "conventional-changelog -p angular -n changelog-options.js -i CHANGELOG.md -s -r 0",
-    "github-releaser": "conventional-github-releaser -p angular -n changelog-options.js -i CHANGELOG.md -s -r 0",
+    "github-releaser": "conventional-github-releaser -p angular -n changelog-options.js -i CHANGELOG.md -s",
     "update-project-version:project-minor": "node scripts/release/version-updater.js -t project -r minor",
     "update-project-version:project-patch": "node scripts/release/version-updater.js -t project -r patch",
     "update-package-version:patch": "node scripts/release/version-updater.js -r patch",
