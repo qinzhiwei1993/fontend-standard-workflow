@@ -142,20 +142,19 @@ npm install --save-dev @commitlint/{config-conventional,cli}
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" > commitlint.config.js
 ```
 
-[commitlint-config-conventional (based on the the Angular convention)](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional#type-enum) 支持一下类型: 
+[commitlint-config-conventional (based on the the Angular convention)](https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional#type-enum) 支持一下类型:
 
 1. `build`: 影响构建系统或外部依赖项的更改(示例范围:gulp、broccoli、npm)
-2. `ci`: 对CI配置文件和脚本的更改(示例范围:Travis, Circle, BrowserStack, SauceLabs)
-3. `chore`: 其他不修改src或测试文件的更改, 发版
+2. `ci`: 对 CI 配置文件和脚本的更改(示例范围:Travis, Circle, BrowserStack, SauceLabs)
+3. `chore`: 其他不修改 src 或测试文件的更改, 发版
 4. `docs`: 文档变更
 5. `feat`: 新的特性、功能
-6. `fix`: bug修复
-7. `perf`: 性能优化 
+6. `fix`: bug 修复
+7. `perf`: 性能优化
 8. `refactor`: 重构
 9. `revert`: 返回先前的提交
 10. `style`: 不影响代码含义的更改(空白、格式、缺少分号等)
 11. `test`: 测试
-
 
 ## 6.[conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)
 
@@ -185,7 +184,6 @@ conventional-changelog -p angular -i CHANGELOG.md -s -r 0
     }
 }
 ```
-
 
 ## 7. 自动发版工具[standard-version](https://github.com/conventional-changelog/standard-version)
 
@@ -222,3 +220,66 @@ conventional-changelog -p angular -i CHANGELOG.md -s -r 0
 
 // npm run release
 ```
+
+## 8.[conventional-github-releaser](https://github.com/conventional-changelog/releaser-tools)
+
+发布到`Github release`或者`GitLab release`
+
+### 快速开始
+
+```bin
+$ npm install -g conventional-github-releaser
+$ cd my-project
+$ conventional-github-releaser -p angular
+```
+
+```json
+// package.json
+{
+    "scripts": {
+        "release": "conventional-github-releaser -p angular -n changelog-options.js -i CHANGELOG.md -s -r 0 -t e3c6d36e80b8faba29f44e91c5778a8271e83291"
+    }
+}
+```
+
+## 9.脚本配置
+
+```json
+{
+    "scripts": {
+        "commit": "cz", // conventional-commit 交互式提交 commit
+        "changelog": "conventional-changelog -p angular -n changelog-options.js -i CHANGELOG.md -s -r 0", // 生成 CHANGELOG.md
+        "github-releaser": "conventional-github-releaser -p angular -n changelog-options.js -i CHANGELOG.md -s -r 0 -t e3c6d36e80b8faba29f44e91c5778a8271e83291", // 发布github或者gitlab releaser
+        "update-project-version: project-minor": "node scripts/release/version-updater.js -t project -r minor", // 更新项目的版本信息
+        "update-project-version: project-patch": "node scripts/release/version-updater.js -t project -r minor", // 更新项目的版本信息
+        "update-package-version: patch": "node scripts/release/version-updater.js -r patch", // 更新组件库版本信息
+        "update-package-version: minor": "node scripts/release/version-updater.js -r minor",// 更新组件库版本信息
+        "tag": "node scripts/release/tag.js", // 打tag标签
+        "release": "npm run tag && npm run github-releaser"
+    }
+}
+```
+
+## 10. 推荐工作流程
+
+- `package`(组件库)
+    - 需求开发
+    - 提交commit
+    - beta发版
+        - `update-package-version: patch` 更新组件库版本，然后打包`publish`
+    - release发版
+        - `update-package-version: minor` 更新组件库版本，然后打包`publish`
+        - `release`分支重新发版，`update-package-version: patch` 更新组件库版本，然后打包`publish`
+    - master发版
+        - `changelog` -> 在`CHANGELOG.md`添加迭代相关信息 -> `commit` -> `release`
+- 迭代项目
+    - 需求开发
+    - 提交commit
+    - beta发版
+        - `build`
+    - release发版
+        - `update-project-version: project-minor` 版本，然后`build`
+        - `release`分支重新发版，`update-project-version: project-patch` 更新版本，然后打包`build`
+    - master发版
+        - `changelog` -> 在`CHANGELOG.md`添加迭代相关信息 -> `commit` -> `release`
+
