@@ -20,6 +20,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # 部署到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:qinzhiwei1993/fontend-standard-workflow.git ci-cd
+git push -f git@github.com:qinzhiwei1993/fontend-standard-workflow.git ci-cd:ci-cd
 
 # cd -
