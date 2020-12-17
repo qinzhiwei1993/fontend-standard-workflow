@@ -1,17 +1,18 @@
 # fontend-standard-workflow
 
-代码规范校验，`commit msg` 校验，CHANGELOG.md 生成，版本升级，打 tag，发布 release
+代码规范校验，`commit`规范校验，`CHANGELOG.md`生成，版本升级，打`tag`，发布`release`
 
 ---
 
-目前项目已经加入`eslint`校验代码风格，并且在`git`钩子`pre-commit`时做了拦截校验，如果格式存在问题，就无法`commit`
+目前前端项目已经在`pre-commit`时使用`lint-stage`和`eslint`做了增量的代码格式校验，在代码层面做了一定程度的规范化。为了进一步规范前端开发的流程以及便于协同工作时方便其他人知道我们每个版本都做了些什么，或者我们自己回顾自己做的东西时，更清晰易懂，不必切到当时的分支去查看代码。因此，我对代码校验后的流程又做了如下的一些规范化优化：
 
-现在要做的是对这之后的工作流程做进一步优化，使整个的流程更加规范化:
 
-1. 对`commit msg`校验，使用`Conventional Commits`规范
-2. 每次发版之后在`master`根据当前`package.jon`的版本号打`tag`([conventional-changelog](https://github.com/conventional-changelog/conventional-changelog)会根据`tag`生成版本变更信息)
-3. 根据`git log`信息，自动生成`CHANGELOG.md`，前提是必须遵循`Conventional Commits`规范
-4. 发布`release`
+1. 对`commit`使用`Conventional Commits`规范
+2. 在`commit-msg`阶段对`commit`进行校验
+3. 无论是项目还是组件库都要有自己的版本，每完成一个版本都要采用`semver`规范，升级版本，并且打上`tag`
+4. 发版之后，根据提交的`commit`信息生成`CHANGELOG.md`
+5. 发布`release`,这里的`release`指的是`github`或者`gitlab`中的`release`
+
 
 ## 1. [husky](https://typicode.github.io/husky/#/)
 
