@@ -1,6 +1,6 @@
 {
   "name": "@qinzhiwei1993/fontend-standard-workflow",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "代码规范校验，commit msg校验，CHANGELOG.md生成，版本升级，打tag，发布release",
   "main": "index.js",
   "scripts": {
