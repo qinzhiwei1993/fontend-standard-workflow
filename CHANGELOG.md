@@ -1,9 +1,38 @@
+# [1.5.0](https://github.com/qinzhiwei1993/fontend-standard-workflow/compare/v1.4.0...v1.5.0) (2020-12-28)
+
+
+### ✨ Features | 新功能
+
+* 复制husky.sh到test目录下 ([c633895](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/c633895665b29aa77985bd9a69890d0aae44417c))
+
+
+### 🎫 Chores | 其他更新
+
+* 更新版本 ([13314eb](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/13314eb86c703faed963a514eea3443178a6ed2a))
+
+
+### 📝 Documentation | 文档
+
+* README.md ([ff55c3f](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/ff55c3ff7029bbd76606595db25ab5bd1ae8d2eb))
+
+
+### BREAKING CHANGES
+
+* 测试BREAKING如何展示
+
+
+
 # [1.4.0](https://github.com/qinzhiwei1993/fontend-standard-workflow/compare/v1.3.0...v1.4.0) (2020-12-16)
 
 
 ### 👷‍ Build System | 构建
 
 * github-releaser去掉-r ([320318b](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/320318b6d7959b8cc0e75e9e675513786709e8be))
+
+
+### 📝 Documentation | 文档
+
+* CHANGELOG.md and version ([1059325](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/1059325a43c16d474f930e12ca645554a4e3e50e))
 
 
 
