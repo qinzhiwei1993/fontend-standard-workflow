@@ -1,3 +1,12 @@
+# [1.6.0](https://github.com/qinzhiwei1993/fontend-standard-workflow/compare/v1.5.0...v1.6.0) (2020-12-28)
+
+
+### ✨ Features | 新功能
+
+* **beta:** 测试scope ([809f656](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/809f65685e53084ee73acd5aa9e4e714f3861c69))
+
+
+
 # [1.5.0](https://github.com/qinzhiwei1993/fontend-standard-workflow/compare/v1.4.0...v1.5.0) (2020-12-28)
 
 
@@ -13,6 +22,7 @@
 
 ### 📝 Documentation | 文档
 
+* CHANGELOG.md ([fc858e7](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/fc858e7af8f06413ecece608edd417accb2f3910))
 * README.md ([ff55c3f](https://github.com/qinzhiwei1993/fontend-standard-workflow/commit/ff55c3ff7029bbd76606595db25ab5bd1ae8d2eb))
 
 
