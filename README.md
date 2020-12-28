@@ -14,6 +14,20 @@
 5. 发布`release`,这里的`release`指的是`github`或者`gitlab`中的`release`
 
 
+---
+
+在开始前介绍整个流程前，先看下实现后的效果图: 
+
+![image](./images/WX20201228-144307@2x.png)
+
+![image](./images/WX20201228-144436@2x.png)
+
+
+---
+
+下面介绍在优化整个流程过程中用到的工具(部分常用的工具只做简单介绍):
+
+
 ## 1. [husky](https://typicode.github.io/husky/#/)
 
 拦截`Git Hooks`，让你在`Git`的生命周期做一些事情。这里使用的是 `husky v4`
