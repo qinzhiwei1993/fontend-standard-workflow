@@ -17,5 +17,23 @@ module.exports = {
                 'start-case', // Start Case
             ],
         ],
+        'subject-full-stop': [2, 'always', '.'],
+        'type-enum': [
+            2,
+            'always',
+            [
+                'build',
+                'ci',
+                'chore',
+                'docs',
+                'feat',
+                'fix',
+                'perf',
+                'refactor',
+                'revert',
+                'style',
+                'test'
+            ]
+        ]
     },
 }
