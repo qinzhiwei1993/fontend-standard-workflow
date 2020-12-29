@@ -1,3 +1,7 @@
+// Level [0..2]: 0 disables the rule. For 1 it will be considered a warning for 2 an error.
+// Applicable always|never: never inverts the rule.
+// Value: value to use for this rule.
+
 module.exports = {
     extends: ['@commitlint/config-conventional'], // 基于@commitlint/config-conventional扩展
     // parserPreset: 'conventional-changelog-conventionalcommits', // commit信息的格式解析器
@@ -17,7 +21,7 @@ module.exports = {
                 'start-case', // Start Case
             ],
         ],
-        'subject-full-stop': [2, 'always', '.'],
+        'subject-full-stop': [2, 'never', '.'], 
         'type-enum': [
             2,
             'always',
